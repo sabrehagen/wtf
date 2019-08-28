@@ -23,8 +23,6 @@ func (widget *Widget) content() (string, string, bool) {
 	str += " [red]Branch[white]\n"
 	str += fmt.Sprintf(" %s", repoData.Branch)
 	str += "\n"
-	str += widget.formatChanges(repoData.ChangedFiles)
-	str += "\n"
 	str += widget.formatCommits(repoData.Commits)
 
 	return title, str, false
