@@ -20,9 +20,6 @@ func (widget *Widget) content() (string, string, bool) {
 
 	_, _, width, _ := widget.View.GetRect()
 	str := widget.settings.common.SigilStr(len(widget.GitRepos), widget.Idx, width) + "\n"
-	str += " [red]Branch[white]\n"
-	str += fmt.Sprintf(" %s", repoData.Branch)
-	str += "\n"
 	str += widget.formatCommits(repoData.Commits)
 
 	return title, str, false
