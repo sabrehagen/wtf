@@ -77,10 +77,9 @@ func (widget *Widget) contentFrom(searchResult *SearchResult) string {
 
 	for idx, issue := range searchResult.Issues {
 		row := fmt.Sprintf(
-			`[%s] [%s]%-6s[white] [green]%-10s[white] [yellow][%s][white] [%s]%s`,
+			` [%s][%s][white][green]%-10s[white][yellow][%s][white] [%s]%s`,
 			widget.RowColor(idx),
 			widget.issueTypeColor(&issue),
-			issue.IssueFields.IssueType.Name,
 			issue.Key,
 			issue.IssueFields.IssueStatus.IName,
 			widget.RowColor(idx),
